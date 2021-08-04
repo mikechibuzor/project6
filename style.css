@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* import font lato */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 90%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.user-name span {
+  display: block;
+}
+
+.user-name span:nth-of-type(1) {
+  font-weight: 700;
+  color: #000000;
+  text-align: right;
+}
+
+.user-name span:nth-of-type(2) {
+  font-weight: 400;
+  color: #8b8b8f;
+}
+
+.hover-me {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0.5rem 0.25rem;
+  cursor: pointer;
+  /* transition: all 0.1s linear; */
+  border-radius: 0.35rem;
+}
+
+.hover-me:hover {
+  background: #e9e9ec;
+}
+
+.hover-me p {
+  margin-right: 0.6rem;
+}
+
+/* styling below handles the hover-me drop-down show logic */
+.hover-me:hover ~ .drop-down-menu,
+.hover-me:active ~ .drop-down-menu {
+  display: block;
+}
+
+/* Drop down menu starts here */
+
+.drop-down-menu {
+  z-index: 20000;
+  /* White */
+
+  background: #ffffff;
+  /* Grey/Grey 3 */
+
+  border: 1px solid #dcdce0;
+  box-sizing: border-box;
+  /* Elevation level 2 */
+
+  box-shadow: 0px 2px 8px rgba(51, 51, 51, 0.24);
+  border-radius: 8px;
+
+  position: absolute;
+  right: 1rem;
+  top: 5rem;
+  /* width: 17vw; */
+}
+
+.hide {
+  display: none;
+}
+
+.drop-down-menu ul {
+  list-style: none;
+}
+
+.drop-down-menu ul li {
+  padding: 0.6rem 6rem 0.6rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drop-down-menu ul li span:nth-of-type(1),
+.drop-down-menu ul li span:nth-of-type(2) {
+  margin-right: 0.45rem;
+}
+
+.check-hover {
+  visibility: hidden;
+}
+
+.border {
+  border-top: 1px solid #dcdce0;
+}
+
+.drop-down-menu ul li:hover {
+  background: rgba(55, 164, 71, 0.1);
+}
+
+.drop-down-menu ul li:nth-of-type(2):hover,
+.drop-down-menu ul li:nth-of-type(3):hover {
+  color: #157123;
+}
+
+.drop-down-menu ul li:hover .check-hover {
+  visibility: visible;
+}
+svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* your company */
+.your-companies {
+  color: #717175;
+  font-weight: 700;
+}
+
+/* Viljat */
+.Vil {
+  font-weight: 700;
+  color: #000000;
+}
